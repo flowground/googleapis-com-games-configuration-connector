@@ -1,0 +1,246 @@
+{
+    "type": "object",
+    "properties": {
+        "achievementId": {
+            "required": true,
+            "type": "string"
+        },
+        "fields": {
+            "type": "string"
+        },
+        "key": {
+            "type": "string"
+        },
+        "oauth_token": {
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "This is a JSON template for an achievement configuration resource.",
+            "properties": {
+                "achievementType": {
+                    "description": "The type of the achievement.\nPossible values are:  \n- \"STANDARD\" - Achievement is either locked or unlocked. \n- \"INCREMENTAL\" - Achievement is incremental.",
+                    "type": "string"
+                },
+                "draft": {
+                    "description": "The draft data of the achievement.",
+                    "properties": {
+                        "description": {
+                            "description": "Localized strings for the achievement description.",
+                            "properties": {
+                                "kind": {
+                                    "default": "gamesConfiguration#localizedStringBundle",
+                                    "description": "Uniquely identifies the type of this resource. Value is always the fixed string gamesConfiguration#localizedStringBundle.",
+                                    "type": "string"
+                                },
+                                "translations": {
+                                    "description": "The locale strings.",
+                                    "items": {
+                                        "description": "This is a JSON template for a localized string resource.",
+                                        "properties": {
+                                            "kind": {
+                                                "default": "gamesConfiguration#localizedString",
+                                                "description": "Uniquely identifies the type of this resource. Value is always the fixed string gamesConfiguration#localizedString.",
+                                                "type": "string"
+                                            },
+                                            "locale": {
+                                                "description": "The locale string.",
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "description": "The string value.",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "iconUrl": {
+                            "description": "The icon url of this achievement. Writes to this field are ignored.",
+                            "type": "string"
+                        },
+                        "kind": {
+                            "default": "gamesConfiguration#achievementConfigurationDetail",
+                            "description": "Uniquely identifies the type of this resource. Value is always the fixed string gamesConfiguration#achievementConfigurationDetail.",
+                            "type": "string"
+                        },
+                        "name": {
+                            "description": "Localized strings for the achievement name.",
+                            "properties": {
+                                "kind": {
+                                    "default": "gamesConfiguration#localizedStringBundle",
+                                    "description": "Uniquely identifies the type of this resource. Value is always the fixed string gamesConfiguration#localizedStringBundle.",
+                                    "type": "string"
+                                },
+                                "translations": {
+                                    "description": "The locale strings.",
+                                    "items": {
+                                        "description": "This is a JSON template for a localized string resource.",
+                                        "properties": {
+                                            "kind": {
+                                                "default": "gamesConfiguration#localizedString",
+                                                "description": "Uniquely identifies the type of this resource. Value is always the fixed string gamesConfiguration#localizedString.",
+                                                "type": "string"
+                                            },
+                                            "locale": {
+                                                "description": "The locale string.",
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "description": "The string value.",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "pointValue": {
+                            "description": "Point value for the achievement.",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "sortRank": {
+                            "description": "The sort rank of this achievement. Writes to this field are ignored.",
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    },
+                    "type": "object"
+                },
+                "id": {
+                    "description": "The ID of the achievement.",
+                    "type": "string"
+                },
+                "initialState": {
+                    "description": "The initial state of the achievement.\nPossible values are:  \n- \"HIDDEN\" - Achievement is hidden. \n- \"REVEALED\" - Achievement is revealed. \n- \"UNLOCKED\" - Achievement is unlocked.",
+                    "type": "string"
+                },
+                "kind": {
+                    "default": "gamesConfiguration#achievementConfiguration",
+                    "description": "Uniquely identifies the type of this resource. Value is always the fixed string gamesConfiguration#achievementConfiguration.",
+                    "type": "string"
+                },
+                "published": {
+                    "description": "The read-only published data of the achievement.",
+                    "properties": {
+                        "description": {
+                            "description": "Localized strings for the achievement description.",
+                            "properties": {
+                                "kind": {
+                                    "default": "gamesConfiguration#localizedStringBundle",
+                                    "description": "Uniquely identifies the type of this resource. Value is always the fixed string gamesConfiguration#localizedStringBundle.",
+                                    "type": "string"
+                                },
+                                "translations": {
+                                    "description": "The locale strings.",
+                                    "items": {
+                                        "description": "This is a JSON template for a localized string resource.",
+                                        "properties": {
+                                            "kind": {
+                                                "default": "gamesConfiguration#localizedString",
+                                                "description": "Uniquely identifies the type of this resource. Value is always the fixed string gamesConfiguration#localizedString.",
+                                                "type": "string"
+                                            },
+                                            "locale": {
+                                                "description": "The locale string.",
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "description": "The string value.",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "iconUrl": {
+                            "description": "The icon url of this achievement. Writes to this field are ignored.",
+                            "type": "string"
+                        },
+                        "kind": {
+                            "default": "gamesConfiguration#achievementConfigurationDetail",
+                            "description": "Uniquely identifies the type of this resource. Value is always the fixed string gamesConfiguration#achievementConfigurationDetail.",
+                            "type": "string"
+                        },
+                        "name": {
+                            "description": "Localized strings for the achievement name.",
+                            "properties": {
+                                "kind": {
+                                    "default": "gamesConfiguration#localizedStringBundle",
+                                    "description": "Uniquely identifies the type of this resource. Value is always the fixed string gamesConfiguration#localizedStringBundle.",
+                                    "type": "string"
+                                },
+                                "translations": {
+                                    "description": "The locale strings.",
+                                    "items": {
+                                        "description": "This is a JSON template for a localized string resource.",
+                                        "properties": {
+                                            "kind": {
+                                                "default": "gamesConfiguration#localizedString",
+                                                "description": "Uniquely identifies the type of this resource. Value is always the fixed string gamesConfiguration#localizedString.",
+                                                "type": "string"
+                                            },
+                                            "locale": {
+                                                "description": "The locale string.",
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "description": "The string value.",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "pointValue": {
+                            "description": "Point value for the achievement.",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "sortRank": {
+                            "description": "The sort rank of this achievement. Writes to this field are ignored.",
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    },
+                    "type": "object"
+                },
+                "stepsToUnlock": {
+                    "description": "Steps to unlock. Only applicable to incremental achievements.",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "token": {
+                    "description": "The token for this resource.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}
